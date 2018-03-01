@@ -30,7 +30,7 @@ As the last step, we constructed a scatter plot where each word is depicted at t
 ## Visualization
 ### Without Phrases
 
-![alt text](https://raw.githubusercontent.com/gao-xian-peh/Hillary-Clinton-Emails/master/without_phrases.png)
+![alt text](https://raw.githubusercontent.com/gao-xian-peh/HillaryClintonEmails/master/without_phrases.png)
 
 The above plot is a visualization of the t-SNE reduced embeddings of several interesting words seen in the Clinton email dataset. Because we used t-SNE rather than PCA for our dimensionality reduction, we are looking for clustering behavior rather than vector relationships in this visualization. The first feature of note is the fact that the words appear to be grouped roughly into geographical clusters. American political figures like Barack Obama, Hillary Clinton, and John McCain all appear on the left side of the plot. Even within this group, there appears to be a distinction between key political leaders (Obama, Clinton, Biden) and individuals who play supporting roles (McCain, Podesta). The second major cluster is in the top right of the figure. Here, we see the names of Middle Eastern states and their leaders. Benghazi, Gaddafi, and Libya all appear near to each other, as do Syria and Assad. Iran is somewhere between Syria and Libya, and Israel is arguably still in this cluster but farther away from the other members, which makes sense from a geopolitical perspective as well. The final cluster is in the bottom center of the figure and includes European leaders and countries. It was encouraging to see that, like Assad/Syria and Gaddafi/Libya, the embedding for Angela Merkel appears close to the embedding for “German” (the stemmed form of Germany).
 
@@ -38,7 +38,7 @@ As a final exercise, we looked at the embeddings for “President” and “Dict
 
 ### With Phrases
 
-![alt text](https://raw.githubusercontent.com/gao-xian-peh/Hillary-Clinton-Emails/master/with_phrases.png)
+![alt text](https://raw.githubusercontent.com/gao-xian-peh/HillaryClintonEmails/master/with_phrases.png)
 
 In a second analysis, we forced the Word2Vec model to treat certain two-word phrases as a single element to be embedded. We accomplished this simply by removing the whitespace between the two words where they occurred within the Clinton email corpus before feeding the text into gensim for processing. For example, “hillary clinton” becomes “hillaryclinton.” The above plot is the result of computing the embeddings and plotting them after reduction to two dimensions via t-SNE. Unfortunately, our results here are probably less insightful than those we saw before adding the notion of phrases to our analysis. Hillary Clinton and John McCain now seem to fall into the European leader/nation cluster, and the embedding for Barack Obama has somehow ended up near Muammar Gaddafi. Libya and Benghazi are clustered near each other but are relatively far away from Syria, Iran, and Israel. The embedding for “president” is still in an isolated cluster, and the embedding for “dictator” is closest to the embedding for Libya.
 
