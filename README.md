@@ -2,7 +2,7 @@
 
 ## Team
 
-This is a collaborative project done by [Jack Kolb](https://people.eecs.berkeley.edu/~jkolb/), [Gao Xian Peh](https://gao-xian-peh.github.io/)and [Jong Ha Lee](https://www.linkedin.com/in/jonghalee31). 
+This is a collaborative project done by [Jack Kolb](https://people.eecs.berkeley.edu/~jkolb/), [Gao Xian Peh](https://gao-xian-peh.github.io/) and [Jong Ha Lee](https://www.linkedin.com/in/jonghalee31). 
 
 ## Introduction
 
